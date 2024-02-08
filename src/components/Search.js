@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
- 
-function Search({ getYouTubeVideos }) {
+
+function Search({ handleSearchInputChange }) {
   const [value, setValue] = useState("")
 
   const handleInputChange = (e) => {
-    getYouTubeVideos(e.target.value);
+    handleSearchInputChange(e.target.value);
     setValue(e.target.value)
   }
 
@@ -22,7 +22,7 @@ function Search({ getYouTubeVideos }) {
       </button>
     </div>
   );
-  
+
 }
 
 export default Search;
